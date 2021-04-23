@@ -1,4 +1,6 @@
 import express from "express";
+//import dessa forma já importa e executa o index.js, pois dentro da pasta database existe um arquivo index.js
+import "./database";
 
 const app = express();
 
