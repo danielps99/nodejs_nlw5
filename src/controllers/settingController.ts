@@ -1,17 +1,12 @@
 import { Request, Response } from "express";
-import { getCustomRepository } from "typeorm";
-import { SettingReposity } from "../repositories/settingRepository";
+import { SettingService } from "../services/SettingsService";
 
 class SettingController {
   async create(request: Request, response: Response) {
     const { chat, username } = request.body;
-  const settingReposity = getCustomRepository(SettingReposity);
-  const setting = settingReposity.create({
-    chat,
-    username
-  });
-  settingReposity.save(setting);
-  return response.json(setting);
+    const settingService = new SettingService();
+    const setting = settingService.create({ chat, username });
+    return response.json(setting);
   }
 }
 
