@@ -5,8 +5,12 @@ class SettingController {
   async create(request: Request, response: Response) {
     const { chat, username } = request.body;
     const settingService = new SettingService();
-    const setting = settingService.create({ chat, username });
-    return response.json(setting);
+    try {
+      const setting = await settingService.create({ chat, username });
+      return response.json(setting);
+    } catch (err) {
+      return response.status(400).json({message: err.message});
+    }
   }
 }
 
