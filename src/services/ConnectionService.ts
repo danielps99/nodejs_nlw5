@@ -1,5 +1,4 @@
 import { getCustomRepository } from "typeorm";
-import { Connection } from "../entities/Connection";
 import { ConnectionRepository } from "../repositories/ConnectionRepository";
 
 interface IConnectionCreate {
@@ -9,7 +8,7 @@ interface IConnectionCreate {
   id?: string;
 }
 
-class ConnectionsService {
+class ConnectionService {
   private connectionsRepository: ConnectionRepository;
 
   constructor() {
@@ -23,6 +22,11 @@ class ConnectionsService {
     
     return connection;
   }
+
+  async findByUserId(user_id: string) {
+    const connection = await this.connectionsRepository.findOne({ user_id });
+    return connection;
+  }
 }
 
-export { ConnectionsService };
+export { ConnectionService };
