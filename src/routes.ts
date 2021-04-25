@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { MessageController } from "./controllers/MessageController";
-import { SettingController } from "./controllers/settingController";
+import { SettingController } from "./controllers/SettingController";
 import { UserController } from "./controllers/UserController";
 const routes = Router();
 

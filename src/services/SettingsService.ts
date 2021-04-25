@@ -1,5 +1,5 @@
 import { getCustomRepository } from "typeorm";
-import { SettingReposity } from "../repositories/settingRepository";
+import { SettingReposity } from "../repositories/SettingRepository";
 
 interface ISettingCreate {
   chat: boolean;
