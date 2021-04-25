@@ -26,15 +26,16 @@ $ yarn add @types/uuid -D
 
 ### DIA 3
 ```
-yarn typeorm migration:create -n CreateUser
-yarn typeorm migration:create -n CreateMessage
-yarn typeorm migration:create -n CreateConnection
+$ yarn typeorm migration:create -n CreateUser
+$ yarn typeorm migration:create -n CreateMessage
+$ yarn typeorm migration:create -n CreateConnection
 ### Depois de preencher os metodos up e down das migrations, executar o comando abaixo
 $ yarn typeorm migration:run
 ```
 
 ### DIA 4
 ```
-yarn add socket.io
-yarn add @types/socket.io -D
+$ yarn add socket.io
+$ yarn add @types/socket.io -D
+$ yarn add ejs
 ```
