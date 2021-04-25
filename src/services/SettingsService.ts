@@ -17,7 +17,7 @@ class SettingService {
     const settingsAlreadyExists = await this.settingReposity.findOne({username,});
 
     if (settingsAlreadyExists) {
-      throw new Error('Settings with username already exists.');
+      throw new Error("Settings with username already exists.");
     }
     //DEPOIS VER PRA VALIDAR COM OUTRO METTODO
     // this.validateHasSettingWithUsername(username);
@@ -30,7 +30,7 @@ class SettingService {
     const settingsAlreadyExists = await this.settingReposity.findOne({username,});
 
     if (settingsAlreadyExists) {
-      throw new Error('Settings with username already exists.');
+      throw new Error("Settings with username already exists.");
     }
   }
 }

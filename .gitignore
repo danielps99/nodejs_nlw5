@@ -2,3 +2,4 @@ node_modules
 yarn.lock
 #arquivo criado ao configurar e executar o projeto com yarn dev
 src/database/database.sqlite
+package-lock.json
